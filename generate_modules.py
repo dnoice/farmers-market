@@ -309,6 +309,42 @@ def build_module_1():
         ],
         col_widths=[0.8, 1.6, 4.4])
 
+    # ── BACKWARD PLANNING FROM MARCH RFP ─────────────────────
+    add_heading_styled(doc, "4. Backward Planning: Working from the March RFP Deadline", level=1)
+    add_body_para(doc,
+        "The March RFP window is an immovable deadline. Everything must be planned backward "
+        "from that date. If you are reading this after the current year's window has closed, "
+        "target the following March and use the intervening months for alternative revenue."
+    )
+
+    add_callout_box(doc,
+        "CRITICAL: THE RFP CLIFF",
+        "The Santa Monica Farmers Market RFP opens briefly in March and closes. There is no "
+        "late application, no waitlist, and no mid-year entry. If you miss March, you wait "
+        "12 months. Your ENTIRE launch timeline must work backward from this single date."
+    )
+
+    add_styled_table(doc,
+        ["Target Date", "Milestone", "Why This Deadline"],
+        [
+            ["March (RFP month)", "Submit complete RFP application with ALL documents", "The immovable deadline -- everything else flows backward from here"],
+            ["Mid-February", "All permits, insurance COIs, and commissary agreement finalized", "RFP requires proof of ready-to-operate status, not 'in progress'"],
+            ["January", "Pass LACDPH vehicle inspection; MFF Health Permit issued", "Permit must be in hand before RFP submission"],
+            ["December (prior year)", "Trailer build-out complete; schedule LACDPH inspection", "Inspection scheduling takes 1-3 weeks; allow buffer for re-inspection"],
+            ["October-November", "LACDPH plan check approval received", "Plan check review takes 4-12 weeks; corrections add 2-4 weeks each cycle"],
+            ["August-September", "Submit plan check to LACDPH; sign commissary agreement", "Need signed storage verification form to submit with plan check"],
+            ["July-August", "SBA loan funded; trailer acquired; commissary selected", "Trailer must exist (or have manufacturer specs) for plan check submission"],
+            ["May-June", "Business entity formed; Seller's Permit obtained; SBA application submitted", "SBA approval takes 30-90 days from application to funding"],
+        ],
+        col_widths=[1.4, 2.6, 2.8])
+
+    add_body_para(doc,
+        "Total lead time from first action to RFP submission: 8-10 months minimum. "
+        "For a first-time applicant, budget a full 10 months. If starting in May/June, "
+        "you are targeting the following March RFP window.",
+        bold=True, italic=True
+    )
+
     doc.save("Module_1_Pre_Launch_Timeline.docx")
     print("Module 1 saved: Module_1_Pre_Launch_Timeline.docx")
 
@@ -406,7 +442,7 @@ def build_module_2():
         ("Handwashing Sink", "Minimum 9\"W x 9\"L x 5\"D; warm water 100-108 deg F; soap and single-use towel dispensers mounted within arm's reach"),
         ("3-Compartment Warewashing Sink", "Each compartment large enough to fully submerge largest utensil; water temperature minimum 120 deg F; two integral metal drainboards"),
         ("Fresh Water Tank", "Adequate capacity for full day of operation (minimum 30 gallons recommended); food-grade materials; pressurized or gravity-fed delivery"),
-        ("Grey Water Tank", "Must be at least 15% larger capacity than fresh water tank; clearly labeled; no ground discharge permitted"),
+        ("Grey Water Tank", "Must be at least 150% the capacity of fresh water tank per California Retail Food Code; clearly labeled; no ground discharge permitted"),
         ("Mechanical Refrigeration", "Minimum 12 cubic feet usable space; maintains 41 deg F or below; thermometer visible without opening"),
         ("Enclosure", "All food preparation areas fully enclosed with solid walls or 16-mesh screens; customer service windows maximum 216 square inches"),
         ("Flooring", "Smooth, nonabsorbent, easily cleanable; coved at wall junctions; no carpet"),
@@ -559,6 +595,27 @@ def build_module_2():
         "Monthly: Pay commissary rent, insurance premiums, SBA loan payment.\n"
         "Daily: Maintain Route Sheet in vehicle. Keep all permits physically in trailer."
     )
+
+    # ── COMMON GOTCHAS ──────────────────────────────────────────
+    add_heading_styled(doc, "6. Common Gotchas and Pitfalls", level=1)
+    add_body_para(doc,
+        "First-time MFF applicants frequently encounter these issues. Each one can add "
+        "weeks or months to your timeline if not anticipated."
+    )
+
+    add_styled_table(doc,
+        ["Gotcha", "Why It Happens", "How to Avoid"],
+        [
+            ["Plan check correction cycles", "Incomplete or non-compliant drawings are the #1 cause of delay. Each correction cycle adds 2-4 weeks.", "Have an experienced plan check preparer or consultant review your drawings before submission. Pay for one hour of professional review -- it saves months."],
+            ["Buying trailer before plan check approval", "If the trailer doesn't match what LACDPH approves, you need expensive modifications.", "Submit plans based on manufacturer specs first. Purchase or customize AFTER plan approval, not before."],
+            ["Grey water tank undersized", "California Retail Food Code requires waste water tank at minimum 150% of fresh water tank capacity. Many stock trailers don't meet this.", "Verify tank sizing before purchase. A 30-gallon fresh tank requires a 45-gallon grey water tank minimum."],
+            ["Equipment without NSF/ANSI certification", "Cheap equipment from consumer retailers lacks required certification stamps. Inspector will fail you on the spot.", "Only purchase from commercial restaurant supply with NSF stickers on every food-contact surface."],
+            ["Residential trailer storage", "Even temporarily parking the trailer at your home between commissary contract and permit issuance triggers violations. Inspectors do drive-bys.", "Secure commissary agreement BEFORE taking delivery of the trailer."],
+            ["Insurance endorsement delays", "Markets and commissaries require specific named-insured endorsements on your COIs. Getting endorsements takes extra time.", "Request all endorsements when you first bind the policy, not as an afterthought."],
+            ["Service window too large", "Many imported trailers have standard windows exceeding the 216 sq. in. maximum.", "Measure the window opening before purchase. If too large, plan to install a compliant reducer panel."],
+            ["Commissary waitlists", "Popular commissaries in LA have waitlists, especially for trailer parking slots.", "Start commissary shopping 2-3 months before you need the signed verification form."],
+        ],
+        col_widths=[1.6, 2.4, 2.8])
 
     doc.save("Module_2_Regulatory_Compliance_Guide.docx")
     print("Module 2 saved: Module_2_Regulatory_Compliance_Guide.docx")
@@ -1062,9 +1119,20 @@ def build_module_5():
             ["Farmers Market Sales", "~85% of revenue", "~65% of revenue", "Add 1-2 additional markets per week"],
             ["Private Events / Catering", "~15% of revenue", "~25% of revenue", "Active outreach, Thumbtack profile, business cards at every market"],
             ["Food Truck Festivals", "0%", "~5% of revenue", "Apply to 3-4 festivals (Smorgasburg LA, 626 Night Market, etc.)"],
-            ["Corporate/Office Catering", "0%", "~5% of revenue", "Leverage veteran networks, LinkedIn outreach"],
+            ["Corporate/Office Catering", "0%", "~5% of revenue", "Leverage veteran networks, LinkedIn outreach, target Silicon Beach tech offices"],
+            ["Brewery Partnerships", "0%", "~5% of revenue", "Free or low-fee setup at LA breweries on busy nights; dessert + beer is a natural pairing"],
         ],
         col_widths=[1.8, 1.4, 1.4, 2.2])
+
+    add_callout_box(doc,
+        "HIGH-VALUE FESTIVAL TARGETS",
+        "626 Night Market (Arcadia): 50,000+ visitors/weekend, vendor fees $500-$1,000, "
+        "revenue potential $3,000-$8,000/weekend. Long waitlist -- apply early.\n\n"
+        "Smorgasburg LA (ROW DTLA, Sundays): Vendor fees $300-$600/day, revenue potential "
+        "$1,500-$4,000/day. Very competitive application.\n\n"
+        "Abbot Kinney First Fridays (Venice): Massive foot traffic, street vendor opportunities.\n\n"
+        "These are high-effort, high-reward events. Book 2-3 months in advance."
+    )
 
     add_heading_styled(doc, "2.3 Menu Evolution", level=2)
     add_body_para(doc,
@@ -1080,9 +1148,12 @@ def build_module_5():
             ["Large/XL cotton candy (festival size)", "None -- same machine", "LOW", "Year 1 Q2+", "$8-$10 price point"],
             ["Combination deals (cotton candy + shaved ice)", "None", "LOW", "Year 1 Q2+", "Higher average ticket"],
             ["Toppings bar (mochi, fruit, condensed milk)", "Small cold display", "LOW-MEDIUM", "Year 2 Q1+", "+$1-$3 upsell per unit"],
+            ["Cotton candy flower bouquets (gift item)", "None -- same machine + packaging", "LOW", "Year 1 Q4+", "$15-$25 each; weddings, holidays, gifts"],
+            ["Pre-packaged cotton candy bags (retail)", "Sealed bags + labeling", "LOW", "Year 2 Q1+", "$5-$8 each; passive income at market stall"],
             ["Seasonal LTOs (pumpkin spice, candy cane, etc.)", "None -- new sugar flavors", "LOW", "Year 1 Q4+", "Creates urgency and social media buzz"],
             ["Beverages (lemonade, agua fresca)", "New dispenser + additional permits review", "MEDIUM", "Year 2 Q2+ (if demand justifies)", "New $4-$5 product line"],
             ["Hot desserts (churros, funnel cake)", "Deep fryer + hood + upgraded MFF classification", "HIGH -- AVOID", "Year 3+ at earliest", "Triggers major permit upgrade"],
+            ["Soft serve / frozen yogurt", "New machine + higher permit tier", "HIGH -- AVOID", "Year 3+ at earliest", "Different equipment and commissary requirements"],
         ],
         col_widths=[1.8, 1.4, 1.0, 1.2, 1.4])
 
@@ -1130,6 +1201,16 @@ def build_module_5():
             ["Legal Requirements", "Workers' Compensation insurance (must bind before first shift), I-9 verification, W-4"],
         ],
         col_widths=[1.6, 5.2])
+
+    add_callout_box(doc,
+        "CALIFORNIA AB5 WARNING: DO NOT USE 1099 CONTRACTORS",
+        "Under California's AB5 law, if a worker uses your equipment, works your schedule, "
+        "and operates under your direction, they are a W-2 employee -- not an independent "
+        "contractor. Misclassifying employees as 1099 contractors carries severe penalties "
+        "in California, including back taxes, penalties, and potential lawsuits. Your market "
+        "day helpers are employees. Set up proper payroll (Gusto, Square Payroll, or similar) "
+        "from day one."
+    )
 
     # ── FINANCIAL MILESTONES ──────────────────────────────────
     add_heading_styled(doc, "4. Financial Milestones", level=1)
