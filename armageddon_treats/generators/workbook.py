@@ -1159,7 +1159,7 @@ def build_workbook():
     ws9.freeze_panes = "A5"
 
     # ── SAVE ──────────────────────────────────────────────────
-    filename = "Armageddon_Treats_Financial_Projections.xlsx"
+    filename = "output/Armageddon_Treats_Financial_Projections.xlsx"
     wb.save(filename)
     print(f"Workbook saved: {filename}")
     print(f"\nSheets: {[s.title for s in wb.worksheets]}")
